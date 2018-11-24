@@ -7,7 +7,7 @@ config({
   accounts: [
     {
       privateKey: 'foobar',
-      balance: 5000000
+      balance: 999999999999
     }
   ]
 }, (_err, web3_accounts) => {
@@ -43,12 +43,43 @@ contract('ColdWallet', function () {
       expect(parseInt(stored), 'Cold wallet should store the ETH it was given.').to.equal(amount);
     });
 
-    it('should payout if owner calls payout', async () => {
-      let res = await coldWallet.methods.payout().call({ from: accounts[0] });
-      console.log(res)
-      let payoutStored = await web3.eth.getBalance(coldWallet.options.address);
-      let intPayout = parseInt(payoutStored);
-      expect(intPayout, 'Wallet funds should be cleared after calling payout.').to.equal(0);
+    describe('on payout call', () => {
+      let isComplete;
+
+      before(async () => {
+        await coldWallet.methods.payout().send({ from: accounts[0] });
+        isComplete = await coldWallet.methods.complete().call();
+      });
+
+      it('should set isComplete to truthy', () => {
+        expect(isComplete).to.be.true;
+      });
+
+      it('should payout if owner calls payout', async () => {
+        let payoutStored = await web3.eth.getBalance(coldWallet.options.address);
+        let intPayout = parseInt(payoutStored);
+        expect(intPayout, 'Wallet funds should be cleared after calling payout.').to.equal(0);
+      });
+
+      describe('on subsequent payout calls', () => {
+        let transaction, balanceBefore;
+
+        before(async () => {
+          balanceBefore = await web3.eth.getBalance(accounts[0]);
+          balanceBefore = parseInt(balanceBefore);
+          transaction = await web3.eth.sendTransaction({
+            value: amount,
+            from: accounts[0],
+            to: coldWallet.options.address
+          });
+        });
+
+        it('should not store eth', async () => {
+          let payoutStored = await web3.eth.getBalance(coldWallet.options.address);
+          let intPayout = parseInt(payoutStored);
+          expect(intPayout, 'Wallet should no longer accept funds.').to.equal(0);
+        });
+      });
     });
   });
 });
