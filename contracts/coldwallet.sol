@@ -4,16 +4,22 @@ contract ColdWallet {
   address public owner;
   uint public total;
 
-  constructor() public {
+  constructor()
+    public
+  {
     owner = msg.sender;
   }
 
-  function payout() public {
+  function payout()
+    public
+  {
     require(msg.sender == owner);
-    msg.sender.transfer(total);
+    owner.transfer(this.balance);
   }
 
-  function () payable {
+  function ()
+    payable
+  {
     total = msg.value;
   }
 

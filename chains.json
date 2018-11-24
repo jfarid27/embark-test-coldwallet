@@ -230,5 +230,73 @@
         "address": "0xA227E5cf1d85453Ba84e883F05AaB0e9C3C1096B"
       }
     }
+  },
+  "0x37a65de167e0260b8a82fdf7e26f42a90dd4aa4d94da5a86c09a97b031c3d02a": {
+    "contracts": {
+      "0x57b5d4dcbf9eec3e7b7d5abc2268d7fdeaf344dfb282d42be15eca06e7ec94e0": {
+        "name": "ColdWallet",
+        "address": "0x12De028Eeff173E011bBFFDC84C695b83647c686"
+      },
+      "0x3043b04ad856d169c8f0b0509c0bc63192dc7edd92d6933c58708298a0e381be": {
+        "name": "ENSRegistry",
+        "address": "0x067027F0Ae204ed2F3fD9DbF1779Ee3e357135DA"
+      },
+      "0x4d4a52460b0a541108fd51ea5ed19cd097fb00aa34fbdd92a1a01aa92ae2f7b9": {
+        "name": "Resolver",
+        "address": "0xD1Ce729244f5150de7f90c5eB1F775A9f9DE4270"
+      },
+      "0xd258cb64c7bb83f9321c9c2951c0d18dd3631883484fe11e00803878bffee7a7": {
+        "name": "FIFSRegistrar",
+        "address": "0x01A5ea3dfB7d6Ca1f3A4a9DD9117355e4f3d6490"
+      }
+    }
+  },
+  "0x153c70fff3635327b40d81c7ed44d29c5de71425b19462f5438be54229d61ab5": {
+    "contracts": {
+      "0x24c9475fd852aab89083bea021622eaf5ccdc0c8616db8bb2551a7d2b005dad5": {
+        "name": "ColdWallet",
+        "address": "0x49bfD0199f96c7B2D6c7FBee6dDC8F1C8522F659"
+      }
+    }
+  },
+  "0xb45d4461f7a674925832fa02442a3c9f4c36ae7c42acbc2d66bf0711d4535c3d": {
+    "contracts": {
+      "0x24c9475fd852aab89083bea021622eaf5ccdc0c8616db8bb2551a7d2b005dad5": {
+        "name": "ColdWallet",
+        "address": "0x6a493908040A50F27a36A20376Da34E074D437c0"
+      }
+    }
+  },
+  "0x56013c4364c532fa872d60efab9937fb3326d369ac641219a45ae56782edbef7": {
+    "contracts": {
+      "0x24c9475fd852aab89083bea021622eaf5ccdc0c8616db8bb2551a7d2b005dad5": {
+        "name": "ColdWallet",
+        "address": "0x73B87aA46c9824902Fd29849B6C77B745ac5eEa8"
+      }
+    }
+  },
+  "0x22eee60e9db8528440a4d949377efb45e8eb691bead4935d057742ae33da14e6": {
+    "contracts": {
+      "0x24c9475fd852aab89083bea021622eaf5ccdc0c8616db8bb2551a7d2b005dad5": {
+        "name": "ColdWallet",
+        "address": "0x01146299dfAFAf8cCcA3118310Df140555985333"
+      }
+    }
+  },
+  "0x551a75b8e5078f1760b0d404fb5bc1d8913060ec02629b33d78c9953f7502269": {
+    "contracts": {
+      "0x24c9475fd852aab89083bea021622eaf5ccdc0c8616db8bb2551a7d2b005dad5": {
+        "name": "ColdWallet",
+        "address": "0x97ADC964dB4c3A63F6b0F132859883F5c7E54Caa"
+      }
+    }
+  },
+  "0x0c7d2ccf3598f274c042ba16e8c5592e8d90e59e43758564b73d8a7359be54ae": {
+    "contracts": {
+      "0x24c9475fd852aab89083bea021622eaf5ccdc0c8616db8bb2551a7d2b005dad5": {
+        "name": "ColdWallet",
+        "address": "0x1D50E0320dfef8fc867796D45f68B043c108A591"
+      }
+    }
   }
 }
